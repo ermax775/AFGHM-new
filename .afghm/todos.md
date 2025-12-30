@@ -13,14 +13,16 @@ Completed
  Scripture banner section
  Contact section with form
  Footer with newsletter signup
-In Progress/Upfront
  Fix any linting errors
- Create first version/initial commit in GitHub with a development and stable branches (dev & stable/v1) with the project pushed to all the branches (dev, stable/v1 & main) on https://github.com/ermax775/AFGHM-new.git with a beautiful README.md file
+ Create initial repository with main, dev, and stable/v1 branches
+ Create beautiful README.md
+
+In Progress/Upfront
+ Add prayer request functionality
+ Add appealing and animated image gallery
 Future Enhancements
  Add more interactivity to forms
- Add prayer request functionality
  Add sermon audio/video player
- Add appealing and animated image gallery
  Add testimonials section
  Add partner section 
 
