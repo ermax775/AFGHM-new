@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
+import { BookOpen, Globe, Heart, Users } from "lucide-react";
 import { useRef } from "react";
-import { Heart, BookOpen, Users, Globe } from "lucide-react";
 
 const values = [
   {
@@ -69,20 +69,20 @@ export function AboutSection() {
               Our Mission
             </h3>
             <p className="text-[hsl(220,10%,40%)] text-lg leading-relaxed mb-6">
-              Anchor For Generations Holistic Ministry (AFGHM) is dedicated to nurturing
-              spiritual growth and building lasting foundations of faith. We believe in
-              approaching ministry holistically – caring for the whole person: spirit,
-              mind, and body.
+              Anchor For Generations Holistic Ministry (AFGHM) is dedicated to
+              nurturing spiritual growth and building lasting foundations of
+              faith. We believe in approaching ministry holistically – caring
+              for the whole person: spirit, mind, and body.
             </p>
             <p className="text-[hsl(220,10%,40%)] text-lg leading-relaxed mb-6">
-              Our name reflects our commitment to being an anchor of hope and stability
-              in an ever-changing world, passing down the timeless truths of Scripture
-              from generation to generation.
+              Our name reflects our commitment to being an anchor of hope and
+              stability in an ever-changing world, passing down the timeless
+              truths of Scripture from generation to generation.
             </p>
             <p className="text-[hsl(220,10%,40%)] text-lg leading-relaxed">
-              Founded on the principles of love, service, and unwavering faith, we
-              strive to create a community where everyone can discover their purpose
-              in Christ and grow together in His grace.
+              Founded on the principles of love, service, and unwavering faith,
+              we strive to create a community where everyone can discover their
+              purpose in Christ and grow together in His grace.
             </p>
           </motion.div>
 

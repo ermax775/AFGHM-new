@@ -53,7 +53,11 @@ export function ScriptureBanner() {
           transition={{ duration: 0.8 }}
           className="flex justify-center mb-8"
         >
-          <AnchorLogo size={80} className="text-primary opacity-50" animate={false} />
+          <AnchorLogo
+            size={80}
+            className="text-primary opacity-50"
+            animate={false}
+          />
         </motion.div>
 
         <motion.blockquote
@@ -63,8 +67,9 @@ export function ScriptureBanner() {
           className="max-w-4xl mx-auto"
         >
           <p className="text-2xl md:text-4xl lg:text-5xl font-light text-white leading-relaxed mb-8">
-            &ldquo;Therefore everyone who hears these words of mine and puts them into
-            practice is like a wise man who built his house on the rock.&rdquo;
+            &ldquo;Therefore everyone who hears these words of mine and puts
+            them into practice is like a wise man who built his house on the
+            rock.&rdquo;
           </p>
           <footer className="text-primary text-xl md:text-2xl font-semibold">
             Matthew 7:24

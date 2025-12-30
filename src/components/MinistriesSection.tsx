@@ -1,27 +1,37 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-import { Users, Baby, Music, Utensils, GraduationCap, HeartHandshake } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion, useInView } from "framer-motion";
+import {
+  Baby,
+  GraduationCap,
+  HeartHandshake,
+  Music,
+  Users,
+  Utensils,
+} from "lucide-react";
+import { useRef } from "react";
 
 const ministries = [
   {
     icon: Users,
     title: "Men's Fellowship",
-    description: "Building godly men through discipleship, accountability, and brotherhood.",
+    description:
+      "Building godly men through discipleship, accountability, and brotherhood.",
     color: "from-amber-500 to-orange-600",
   },
   {
     icon: HeartHandshake,
     title: "Women's Ministry",
-    description: "Empowering women to grow in faith and support one another in love.",
+    description:
+      "Empowering women to grow in faith and support one another in love.",
     color: "from-rose-500 to-pink-600",
   },
   {
     icon: Baby,
     title: "Children's Church",
-    description: "Laying spiritual foundations for our youngest believers with joy and creativity.",
+    description:
+      "Laying spiritual foundations for our youngest believers with joy and creativity.",
     color: "from-cyan-500 to-blue-600",
   },
   {
@@ -33,13 +43,15 @@ const ministries = [
   {
     icon: Music,
     title: "Worship Team",
-    description: "Leading the congregation into God's presence through praise and worship.",
+    description:
+      "Leading the congregation into God's presence through praise and worship.",
     color: "from-emerald-500 to-teal-600",
   },
   {
     icon: Utensils,
     title: "Outreach & Care",
-    description: "Serving our community with compassion through food drives and support programs.",
+    description:
+      "Serving our community with compassion through food drives and support programs.",
     color: "from-orange-500 to-red-600",
   },
 ];
@@ -49,7 +61,10 @@ export function MinistriesSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="ministries" className="py-24 gradient-navy relative overflow-hidden">
+    <section
+      id="ministries"
+      className="py-24 gradient-navy relative overflow-hidden"
+    >
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div
@@ -75,8 +90,8 @@ export function MinistriesSection() {
             Our Ministries
           </h2>
           <p className="text-white/70 text-lg max-w-2xl mx-auto">
-            Discover the many ways you can connect, grow, and serve within our church family.
-            There&apos;s a place for everyone at AFGHM.
+            Discover the many ways you can connect, grow, and serve within our
+            church family. There&apos;s a place for everyone at AFGHM.
           </p>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-6" />
         </motion.div>

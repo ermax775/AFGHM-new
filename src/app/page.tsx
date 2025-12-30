@@ -1,12 +1,12 @@
-import { Navigation } from "@/components/Navigation";
-import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
-import { MinistriesSection } from "@/components/MinistriesSection";
-import { EventsSection } from "@/components/EventsSection";
-import { SermonsSection } from "@/components/SermonsSection";
-import { ScriptureBanner } from "@/components/ScriptureBanner";
 import { ContactSection } from "@/components/ContactSection";
+import { EventsSection } from "@/components/EventsSection";
 import { Footer } from "@/components/Footer";
+import { HeroSection } from "@/components/HeroSection";
+import { MinistriesSection } from "@/components/MinistriesSection";
+import { Navigation } from "@/components/Navigation";
+import { ScriptureBanner } from "@/components/ScriptureBanner";
+import { SermonsSection } from "@/components/SermonsSection";
 
 export default function Home() {
   return (

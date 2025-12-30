@@ -1,11 +1,16 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
-import { AnchorLogo } from "./AnchorLogo";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { AnchorLogo } from "./AnchorLogo";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -49,7 +54,9 @@ export function Navigation() {
               animate={false}
             />
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-white tracking-wide">AFGHM</h1>
+              <h1 className="text-xl font-bold text-white tracking-wide">
+                AFGHM
+              </h1>
               <p className="text-xs text-primary font-medium -mt-1">
                 Anchor For Generations
               </p>
@@ -83,7 +90,11 @@ export function Navigation() {
           {/* Mobile Menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="lg:hidden">
-              <Button variant="ghost" size="icon" className="text-white hover:text-primary">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-white hover:text-primary"
+              >
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
@@ -94,10 +105,16 @@ export function Navigation() {
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <div className="flex flex-col h-full pt-8">
                 <div className="flex items-center gap-3 mb-10">
-                  <AnchorLogo size={40} className="text-primary" animate={false} />
+                  <AnchorLogo
+                    size={40}
+                    className="text-primary"
+                    animate={false}
+                  />
                   <div>
                     <h2 className="text-lg font-bold text-white">AFGHM</h2>
-                    <p className="text-xs text-primary">Anchor For Generations</p>
+                    <p className="text-xs text-primary">
+                      Anchor For Generations
+                    </p>
                   </div>
                 </div>
 

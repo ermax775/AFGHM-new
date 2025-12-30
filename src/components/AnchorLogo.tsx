@@ -8,7 +8,11 @@ interface AnchorLogoProps {
   animate?: boolean;
 }
 
-export function AnchorLogo({ className = "", size = 100, animate = true }: AnchorLogoProps) {
+export function AnchorLogo({
+  className = "",
+  size = 100,
+  animate = true,
+}: AnchorLogoProps) {
   const pathVariants = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: {
