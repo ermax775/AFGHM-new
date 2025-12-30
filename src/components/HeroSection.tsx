@@ -1,18 +1,27 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { AnchorLogo } from "./AnchorLogo";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 import { ChevronDown, Play } from "lucide-react";
+import { useEffect, useState } from "react";
+import { AnchorLogo } from "./AnchorLogo";
 
 export function HeroSection() {
   const [mounted, setMounted] = useState(false);
-  const [particles, setParticles] = useState<Array<{ left: string; top: string; duration: number; delay: number }>>([]);
+  const [particles, setParticles] = useState<
+    Array<{
+      id: number;
+      left: string;
+      top: string;
+      duration: number;
+      delay: number;
+    }>
+  >([]);
 
   useEffect(() => {
     setMounted(true);
-    const newParticles = Array.from({ length: 20 }).map(() => ({
+    const newParticles = Array.from({ length: 20 }).map((_, i) => ({
+      id: i,
       left: `${Math.random() * 100}%`,
       top: `${Math.random() * 100}%`,
       duration: 3 + Math.random() * 2,
@@ -22,7 +31,10 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220,40%,6%)] via-[hsl(220,40%,10%)] to-[hsl(220,40%,8%)]" />
 
@@ -40,25 +52,26 @@ export function HeroSection() {
         />
 
         {/* Floating particles */}
-        {mounted && particles.map((particle, i) => (
-          <motion.div
-            key={`particle-${i}`}
-            className="absolute w-1 h-1 bg-primary/30 rounded-full"
-            style={{
-              left: particle.left,
-              top: particle.top,
-            }}
-            animate={{
-              y: [-20, 20, -20],
-              opacity: [0.2, 0.8, 0.2],
-            }}
-            transition={{
-              duration: particle.duration,
-              repeat: Number.POSITIVE_INFINITY,
-              delay: particle.delay,
-            }}
-          />
-        ))}
+        {mounted &&
+          particles.map((particle) => (
+            <motion.div
+              key={particle.id}
+              className="absolute w-1 h-1 bg-primary/30 rounded-full"
+              style={{
+                left: particle.left,
+                top: particle.top,
+              }}
+              animate={{
+                y: [-20, 20, -20],
+                opacity: [0.2, 0.8, 0.2],
+              }}
+              transition={{
+                duration: particle.duration,
+                repeat: Number.POSITIVE_INFINITY,
+                delay: particle.delay,
+              }}
+            />
+          ))}
       </div>
 
       {/* Ocean waves at bottom */}
@@ -66,7 +79,8 @@ export function HeroSection() {
         <motion.div
           className="absolute bottom-0 left-0 w-[200%] h-32"
           style={{
-            background: "linear-gradient(to top, hsl(220, 40%, 12%), transparent)",
+            background:
+              "linear-gradient(to top, hsl(220, 40%, 12%), transparent)",
           }}
         />
         <svg
@@ -103,9 +117,15 @@ export function HeroSection() {
         >
           <div className="relative">
             <div className="absolute inset-0 animate-glow">
-              <AnchorLogo size={140} className="text-primary blur-lg opacity-50" />
+              <AnchorLogo
+                size={140}
+                className="text-primary blur-lg opacity-50"
+              />
             </div>
-            <AnchorLogo size={140} className="text-primary relative animate-float" />
+            <AnchorLogo
+              size={140}
+              className="text-primary relative animate-float"
+            />
           </div>
         </motion.div>
 
@@ -138,7 +158,8 @@ export function HeroSection() {
           className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10"
         >
           Rooted in faith, anchored in hope. Building spiritual foundations that
-          last for generations through the transformative power of God&apos;s Word.
+          last for generations through the transformative power of God&apos;s
+          Word.
         </motion.p>
 
         <motion.div
@@ -171,7 +192,8 @@ export function HeroSection() {
           className="mt-16 glass rounded-xl px-8 py-6 max-w-xl mx-auto"
         >
           <p className="text-white/90 italic text-lg">
-            &ldquo;We have this hope as an anchor for the soul, firm and secure.&rdquo;
+            &ldquo;We have this hope as an anchor for the soul, firm and
+            secure.&rdquo;
           </p>
           <p className="text-primary font-semibold mt-2">Hebrews 6:19</p>
         </motion.div>

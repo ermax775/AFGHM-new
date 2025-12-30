@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import ClientBody from "./ClientBody";
 import Script from "next/script";
+import ClientBody from "./ClientBody";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -16,8 +16,10 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "AFGHM | Anchor For Generations Holistic Ministry",
-  description: "Rooted in faith, anchored in hope. Building spiritual foundations that last for generations through the transformative power of God's Word.",
-  keywords: "Christian ministry, church, faith, hope, anchor, generations, holistic ministry, worship, community",
+  description:
+    "Rooted in faith, anchored in hope. Building spiritual foundations that last for generations through the transformative power of God's Word.",
+  keywords:
+    "Christian ministry, church, faith, hope, anchor, generations, holistic ministry, worship, community",
 };
 
 export default function RootLayout({

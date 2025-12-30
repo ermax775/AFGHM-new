@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Facebook, Heart, Instagram, Twitter, Youtube } from "lucide-react";
 import { AnchorLogo } from "./AnchorLogo";
-import { Facebook, Instagram, Youtube, Twitter, Heart } from "lucide-react";
 
 const quickLinks = [
   { name: "Home", href: "#home" },
@@ -53,8 +53,8 @@ export function Footer() {
               </div>
             </a>
             <p className="text-white/60 mb-6 leading-relaxed">
-              Building spiritual foundations that last for generations through the
-              transformative power of God&apos;s Word.
+              Building spiritual foundations that last for generations through
+              the transformative power of God&apos;s Word.
             </p>
             {/* Social links */}
             <div className="flex gap-4">
@@ -73,7 +73,9 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-6">Quick Links</h3>
+            <h3 className="text-white font-semibold text-lg mb-6">
+              Quick Links
+            </h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
@@ -91,7 +93,9 @@ export function Footer() {
 
           {/* Ministries */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-6">Ministries</h3>
+            <h3 className="text-white font-semibold text-lg mb-6">
+              Ministries
+            </h3>
             <ul className="space-y-3">
               {ministryLinks.map((link) => (
                 <li key={link.name}>
@@ -109,7 +113,9 @@ export function Footer() {
 
           {/* Newsletter */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-6">Stay Connected</h3>
+            <h3 className="text-white font-semibold text-lg mb-6">
+              Stay Connected
+            </h3>
             <p className="text-white/60 mb-4">
               Subscribe to receive updates, prayer requests, and encouragement.
             </p>
@@ -135,11 +141,12 @@ export function Footer() {
         <div className="container mx-auto px-4 md:px-6 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-white/50 text-sm text-center md:text-left">
-              &copy; {new Date().getFullYear()} AFGHM - Anchor For Generations Holistic Ministry.
-              All rights reserved.
+              &copy; {new Date().getFullYear()} AFGHM - Anchor For Generations
+              Holistic Ministry. All rights reserved.
             </p>
             <p className="text-white/50 text-sm flex items-center gap-1">
-              Made with <Heart className="w-4 h-4 text-primary" /> for the Kingdom
+              Made with <Heart className="w-4 h-4 text-primary" /> for the
+              Kingdom
             </p>
           </div>
         </div>

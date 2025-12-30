@@ -1,9 +1,9 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-import { Calendar, Clock, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion, useInView } from "framer-motion";
+import { Calendar, Clock, MapPin } from "lucide-react";
+import { useRef } from "react";
 
 const events = [
   {
@@ -11,8 +11,10 @@ const events = [
     date: "Every Sunday",
     time: "9:00 AM & 11:00 AM",
     location: "Main Sanctuary",
-    description: "Join us for powerful worship, prayer, and an inspiring message from God's Word.",
-    image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=400&fit=crop",
+    description:
+      "Join us for powerful worship, prayer, and an inspiring message from God's Word.",
+    image:
+      "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=400&fit=crop",
     featured: true,
   },
   {
@@ -20,8 +22,10 @@ const events = [
     date: "Every Wednesday",
     time: "7:00 PM",
     location: "Fellowship Hall",
-    description: "Deep dive into Scripture with our mid-week Bible study sessions.",
-    image: "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=600&h=400&fit=crop",
+    description:
+      "Deep dive into Scripture with our mid-week Bible study sessions.",
+    image:
+      "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?w=600&h=400&fit=crop",
     featured: false,
   },
   {
@@ -30,7 +34,8 @@ const events = [
     time: "6:30 PM",
     location: "Youth Center",
     description: "A night of fun, fellowship, and faith for our young people.",
-    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=400&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=400&fit=crop",
     featured: false,
   },
   {
@@ -38,8 +43,10 @@ const events = [
     date: "January 1-3, 2025",
     time: "6:00 PM - 9:00 PM",
     location: "Main Sanctuary",
-    description: "Start the year anchored in prayer with our annual prayer conference.",
-    image: "https://images.unsplash.com/photo-1507692049790-de58290a4334?w=600&h=400&fit=crop",
+    description:
+      "Start the year anchored in prayer with our annual prayer conference.",
+    image:
+      "https://images.unsplash.com/photo-1507692049790-de58290a4334?w=600&h=400&fit=crop",
     featured: false,
   },
 ];
@@ -69,7 +76,8 @@ export function EventsSection() {
             Upcoming Events
           </h2>
           <p className="text-[hsl(220,10%,40%)] text-lg max-w-2xl mx-auto">
-            Stay connected with what&apos;s happening at AFGHM. We have something for everyone!
+            Stay connected with what&apos;s happening at AFGHM. We have
+            something for everyone!
           </p>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-6" />
         </motion.div>
@@ -82,17 +90,20 @@ export function EventsSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 ${event.featured ? "lg:col-span-2" : ""
-                }`}
+              className={`group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 ${
+                event.featured ? "lg:col-span-2" : ""
+              }`}
             >
               <div
-                className={`flex flex-col ${event.featured ? "lg:flex-row" : ""
-                  }`}
+                className={`flex flex-col ${
+                  event.featured ? "lg:flex-row" : ""
+                }`}
               >
                 {/* Image */}
                 <div
-                  className={`relative overflow-hidden ${event.featured ? "lg:w-1/2 h-64 lg:h-auto" : "h-48"
-                    }`}
+                  className={`relative overflow-hidden ${
+                    event.featured ? "lg:w-1/2 h-64 lg:h-auto" : "h-48"
+                  }`}
                 >
                   <img
                     src={event.image}
@@ -108,7 +119,9 @@ export function EventsSection() {
                 </div>
 
                 {/* Content */}
-                <div className={`p-6 ${event.featured ? "lg:w-1/2 lg:p-10" : ""}`}>
+                <div
+                  className={`p-6 ${event.featured ? "lg:w-1/2 lg:p-10" : ""}`}
+                >
                   <h3 className="text-xl lg:text-2xl font-bold text-[hsl(220,40%,13%)] mb-4 group-hover:text-primary transition-colors">
                     {event.title}
                   </h3>
@@ -128,7 +141,9 @@ export function EventsSection() {
                     </div>
                   </div>
 
-                  <p className="text-[hsl(220,10%,40%)] mb-6">{event.description}</p>
+                  <p className="text-[hsl(220,10%,40%)] mb-6">
+                    {event.description}
+                  </p>
 
                   <Button
                     variant="outline"

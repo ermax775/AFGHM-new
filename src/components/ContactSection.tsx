@@ -1,9 +1,9 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion, useInView } from "framer-motion";
+import { Clock, Mail, MapPin, Phone, Send } from "lucide-react";
+import { useRef, useState } from "react";
 
 const contactInfo = [
   {
@@ -45,7 +45,10 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-24 gradient-navy relative overflow-hidden">
+    <section
+      id="contact"
+      className="py-24 gradient-navy relative overflow-hidden"
+    >
       {/* Decorative elements */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl" />

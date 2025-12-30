@@ -1,9 +1,9 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-import { Play, Clock, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion, useInView } from "framer-motion";
+import { Calendar, Clock, Play } from "lucide-react";
+import { useRef } from "react";
 
 const sermons = [
   {
@@ -11,7 +11,8 @@ const sermons = [
     speaker: "Pastor James Mitchell",
     date: "December 29, 2024",
     duration: "45 min",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
     series: "The Anchor Series",
   },
   {
@@ -19,7 +20,8 @@ const sermons = [
     speaker: "Pastor James Mitchell",
     date: "December 22, 2024",
     duration: "52 min",
-    image: "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=600&h=400&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=600&h=400&fit=crop",
     series: "The Anchor Series",
   },
   {
@@ -27,7 +29,8 @@ const sermons = [
     speaker: "Pastor Sarah Johnson",
     date: "December 15, 2024",
     duration: "38 min",
-    image: "https://images.unsplash.com/photo-1508847154043-be5407fcaa5a?w=600&h=400&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1508847154043-be5407fcaa5a?w=600&h=400&fit=crop",
     series: "Journey of Faith",
   },
 ];
@@ -53,7 +56,8 @@ export function SermonsSection() {
             Recent Sermons
           </h2>
           <p className="text-[hsl(220,10%,40%)] text-lg max-w-2xl mx-auto">
-            Missed a service? Catch up on our latest messages and be encouraged by God&apos;s Word.
+            Missed a service? Catch up on our latest messages and be encouraged
+            by God&apos;s Word.
           </p>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mt-6" />
         </motion.div>
@@ -94,7 +98,9 @@ export function SermonsSection() {
                 <h3 className="text-lg font-bold text-[hsl(220,40%,13%)] mb-2 group-hover:text-primary transition-colors">
                   {sermon.title}
                 </h3>
-                <p className="text-[hsl(220,10%,40%)] text-sm mb-4">{sermon.speaker}</p>
+                <p className="text-[hsl(220,10%,40%)] text-sm mb-4">
+                  {sermon.speaker}
+                </p>
                 <div className="flex items-center gap-4 text-sm text-[hsl(220,10%,50%)]">
                   <div className="flex items-center gap-1">
                     <Calendar className="w-4 h-4" />
