@@ -108,7 +108,7 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
+      <div className="container mx-auto px-4 md:px-6 relative z-10 text-center pb-24">
         <motion.div
           initial={{ scale: 0, rotate: -180 }}
           animate={{ scale: 1, rotate: 0 }}
@@ -189,7 +189,7 @@ export function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
-          className="mt-16 glass rounded-xl px-8 py-6 max-w-xl mx-auto"
+          className="mt-10 glass rounded-xl px-8 py-6 max-w-xl mx-auto"
         >
           <p className="text-white/90 italic text-lg">
             &ldquo;We have this hope as an anchor for the soul, firm and
@@ -204,11 +204,11 @@ export function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2"
       >
         <motion.a
           href="#about"
-          animate={{ y: [0, 10, 0] }}
+          animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
           className="flex flex-col items-center gap-2 text-white/50 hover:text-primary transition-colors"
         >

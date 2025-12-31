@@ -6,6 +6,7 @@ import { GallerySection } from "@/components/GallerySection";
 import { HeroSection } from "@/components/HeroSection";
 import { MinistriesSection } from "@/components/MinistriesSection";
 import { Navigation } from "@/components/Navigation";
+import { PartnerSection } from "@/components/PartnerSection";
 import { PrayerRequestSection } from "@/components/PrayerRequestSection";
 import { ScriptureBanner } from "@/components/ScriptureBanner";
 import { SermonsSection } from "@/components/SermonsSection";
@@ -25,6 +26,7 @@ export default function Home() {
       <ScriptureBanner />
       <PrayerRequestSection />
       <ContactSection />
+      <PartnerSection />
       <Footer />
     </main>
   );
