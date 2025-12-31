@@ -1,13 +1,13 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ChevronDown, Play } from "lucide-react";
 import { useEffect, useState } from "react";
 import { AnchorLogo } from "./AnchorLogo";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export function HeroSection() {
   const [mounted, setMounted] = useState(false);
+  const { t } = useLanguage();
   const [particles, setParticles] = useState<
     Array<{
       id: number;
@@ -135,8 +135,8 @@ export function HeroSection() {
           transition={{ delay: 0.5, duration: 0.8 }}
           className="mb-4"
         >
-          <span className="text-primary text-sm md:text-base font-semibold tracking-[0.3em] uppercase">
-            Welcome to
+          <span className="text-primary text-sm md:text-base font-bold tracking-[0.3em] uppercase">
+            {t("hero.welcome")}
           </span>
         </motion.div>
 
@@ -146,20 +146,18 @@ export function HeroSection() {
           transition={{ delay: 0.7, duration: 0.8 }}
           className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
         >
-          Anchor For Generations
+          {t("hero.title")}
           <br />
-          <span className="text-gradient-gold">Holistic Ministry</span>
+          <span className="text-gradient-gold">{t("hero.subtitle")}</span>
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 0.8 }}
-          className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10"
+          className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10 font-medium"
         >
-          Rooted in faith, anchored in hope. Building spiritual foundations that
-          last for generations through the transformative power of God&apos;s
-          Word.
+          {t("hero.description")}
         </motion.p>
 
         <motion.div
@@ -170,17 +168,17 @@ export function HeroSection() {
         >
           <Button
             size="lg"
-            className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-6 text-lg shadow-lg shadow-primary/25 transition-all duration-300 hover:shadow-xl hover:shadow-primary/40 hover:-translate-y-1"
+            className="bg-primary hover:bg-primary/90 text-white font-bold px-8 py-7 rounded-xl text-lg shadow-lg shadow-primary/25 transition-all duration-300 hover:shadow-xl hover:shadow-primary/40 hover:-translate-y-1"
           >
-            Join Our Community
+            {t("hero.cta.join")}
           </Button>
           <Button
             size="lg"
             variant="outline"
-            className="border-white/40 text-white bg-white/5 hover:bg-white/10 font-semibold px-8 py-6 text-lg group backdrop-blur-sm shadow-xl transition-all duration-300 hover:scale-105"
+            className="border-white/40 text-white bg-white/5 hover:bg-white/10 font-bold px-8 py-7 rounded-xl text-lg group backdrop-blur-sm shadow-xl transition-all duration-300 hover:scale-105"
           >
             <Play className="w-5 h-5 mr-2 text-primary group-hover:scale-125 transition-transform" />
-            Watch Sermon
+            {t("hero.cta.watch")}
           </Button>
         </motion.div>
 
@@ -189,13 +187,12 @@ export function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
-          className="mt-10 glass rounded-xl px-8 py-6 max-w-xl mx-auto"
+          className="mt-10 glass rounded-2xl px-8 py-6 max-w-xl mx-auto"
         >
-          <p className="text-white/90 italic text-lg">
-            &ldquo;We have this hope as an anchor for the soul, firm and
-            secure.&rdquo;
+          <p className="text-white/90 italic text-lg leading-relaxed">
+            &ldquo;{t("hero.verse")}&rdquo;
           </p>
-          <p className="text-primary font-semibold mt-2">Hebrews 6:19</p>
+          <p className="text-primary font-bold mt-2">{t("hero.verse.ref")}</p>
         </motion.div>
       </div>
 
@@ -212,7 +209,9 @@ export function HeroSection() {
           transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
           className="flex flex-col items-center gap-2 text-white/50 hover:text-primary transition-colors"
         >
-          <span className="text-xs uppercase tracking-wider">Scroll</span>
+          <span className="text-xs uppercase tracking-widest font-bold">
+            {t("hero.scroll")}
+          </span>
           <ChevronDown className="w-5 h-5" />
         </motion.a>
       </motion.div>

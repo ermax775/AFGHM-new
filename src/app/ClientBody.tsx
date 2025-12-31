@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { LanguageProvider } from "@/lib/LanguageContext";
 
 export default function ClientBody({
   children,
@@ -13,5 +14,9 @@ export default function ClientBody({
     document.body.classList.add("antialiased");
   }, []);
 
-  return <div className="antialiased">{children}</div>;
+  return (
+    <LanguageProvider>
+      <div className="antialiased">{children}</div>
+    </LanguageProvider>
+  );
 }

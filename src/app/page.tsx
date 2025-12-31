@@ -11,6 +11,7 @@ import { PrayerRequestSection } from "@/components/PrayerRequestSection";
 import { ScriptureBanner } from "@/components/ScriptureBanner";
 import { SermonsSection } from "@/components/SermonsSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { BlogSection } from "@/components/BlogSection";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <EventsSection />
       <SermonsSection />
       <TestimonialsSection />
+      <BlogSection />
       <ScriptureBanner />
       <PrayerRequestSection />
       <ContactSection />
